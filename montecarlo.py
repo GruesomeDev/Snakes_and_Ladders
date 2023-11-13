@@ -48,7 +48,7 @@ class Player:
         self.num_turns += 1
         self.position = self.position + self.roll
 
-        if self.position >= 100:
+        if self.position >= self.end:
             self.game_has_ended = True
             print(f"Game won after {self.num_turns} moves!")
         else:
@@ -57,7 +57,7 @@ class Player:
 
     @property
     def play_a_game(self) -> None:
-        while self.num_turns <= 110 and self.game_has_ended == False:
+        while self.num_turns <= self.end and self.game_has_ended == False:
             self.make_a_move(self.position)
             
 
