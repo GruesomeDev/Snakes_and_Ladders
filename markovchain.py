@@ -44,7 +44,6 @@ row_vector = np.zeros((1, size + 1))[0]
 row_vector[0]  = 1 # probability is 100% in the first round to start here
 
 n = 0
-
 while row_vector[-1] == 0 and n < 100:
     n += 1
     row_vector = np.dot(row_vector, transition_matrix)
