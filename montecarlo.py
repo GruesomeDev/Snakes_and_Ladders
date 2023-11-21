@@ -50,10 +50,10 @@ class Player:
 
         if self.position >= self.end:
             self.game_has_ended = True
-            print(f"Game won after {self.num_turns} moves!")
+            print(f"Game won after {self.num_turns} moves!\n")
         else:
             self.position = self.check_position
-            print(self)
+            # print(self)
 
     @property
     def play_a_game(self) -> None:
@@ -66,6 +66,7 @@ turns = []
 
 while n < 10000:
     n += 1
+    print(f"Round {n}")
     player_one = Player(snakes=snakes, ladders=ladders)
     player_one.play_a_game
     turns.append(player_one.num_turns)
